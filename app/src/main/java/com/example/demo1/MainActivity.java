@@ -24,9 +24,14 @@ public class MainActivity extends AppCompatActivity {
         rem=findViewById(R.id.div);
         clear=findViewById(R.id.clear);
 
+
         sum.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
+                if (n1.getText().toString().isEmpty() || n2.getText().toString().isEmpty()) {
+                    return;
+                }
                 int a = Integer.parseInt(n1.getText().toString());
                 int b = Integer.parseInt(n2.getText().toString());
                 int c = a + b;
@@ -36,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
         dif.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (n1.getText().toString().isEmpty() || n2.getText().toString().isEmpty()) {
+                    return;
+                }
                 int a = Integer.parseInt(n1.getText().toString());
                 int b = Integer.parseInt(n2.getText().toString());
                 int c = a - b;
@@ -45,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
         pro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (n1.getText().toString().isEmpty() || n2.getText().toString().isEmpty()) {
+                    return;
+                }
                 int a = Integer.parseInt(n1.getText().toString());
                 int b = Integer.parseInt(n2.getText().toString());
                 int c = a * b;
@@ -54,15 +65,19 @@ public class MainActivity extends AppCompatActivity {
         rem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (n1.getText().toString().isEmpty() || n2.getText().toString().isEmpty()) {
+                    return;
+                }
                 int a = Integer.parseInt(n1.getText().toString());
                 int b = Integer.parseInt(n2.getText().toString());
-                int c = a / b;
+                float c = a / b;
                 ans.setText(String.valueOf(c));
             }
         });
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 ans.setText("");
                 n1.setText("");
                 n2.setText("");
