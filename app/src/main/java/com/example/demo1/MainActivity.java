@@ -68,9 +68,9 @@ public class MainActivity extends AppCompatActivity {
                 if (n1.getText().toString().isEmpty() || n2.getText().toString().isEmpty()) {
                     return;
                 }
-                int a = Integer.parseInt(n1.getText().toString());
-                int b = Integer.parseInt(n2.getText().toString());
-                float c = a / b;
+                double a = Integer.parseInt(n1.getText().toString());
+                double b = Integer.parseInt(n2.getText().toString());
+                double c = a / b;
                 ans.setText(String.valueOf(c));
             }
         });
